@@ -69,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
+    "url": "git+https://github.com/alecaivazis/editr.git"
   },
   "author": {
     "name": "C. T. Lin",
@@ -78,7 +78,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
+    "url": "https://github.com/alecaivazis/editr/issues"
   },
   "keywords": [
     "electron",
@@ -89,7 +89,7 @@
     "webpack",
     "react-hot"
   ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/alecaivazis/editr#readme",
   "devDependencies": {
     "asar": "^0.12.3",
     "babel-core": "^6.18.2",
