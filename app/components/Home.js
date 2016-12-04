@@ -1,16 +1,12 @@
 // @flow
+// external imports
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+// local imports
+import styles from './styles'
 
-
-export default class Home extends Component {
-  render() {
-    return (
-      <div>
-        <div>
-            hello
-        </div>
-      </div>
-    )
-  }
-}
+export default ({...unusedProps}) => (
+  <div>
+    hello
+  </div>
+)
