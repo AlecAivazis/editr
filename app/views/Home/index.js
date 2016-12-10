@@ -2,12 +2,12 @@
 // external imports
 import React from 'react'
 // local imports
-import FileBrowser from '../FileBrowser'
+import FileBrowser from '../../components/FileBrowser/'
 import styles from './styles'
 
 const Home =  ({style, ...unusedProps}) => (
   <div style={{...styles.container, ...style}} {...unusedProps}>
-  	<FileBrowser styles={styles} />
+  	<FileBrowser />
     <div style={styles.contentPane}>
     	Main Content
     </div>

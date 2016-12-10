@@ -3,6 +3,7 @@ import React from 'react'
 // local imports
 import File from './File'
 import Folder from './Folder'
+import styles from './styles'
 
 const exampleFolder = {
 	name: 'Borat stuff', 
@@ -29,7 +30,7 @@ const renderChild = (child) => {
 	}
 }
 
-const FileBrowser =  ({style, styles, ...unusedProps}) => (
+const FileBrowser =  ({style, ...unusedProps}) => (
     <div style={{...styles.sidebar, ...style}} {...unusedProps}>
   		{renderChild(exampleFolder)}
     </div>

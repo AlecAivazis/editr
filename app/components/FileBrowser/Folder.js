@@ -2,6 +2,7 @@
 import React from 'react'
 import liftC from 'react-liftc'
 // local imports
+import styles from './styles'
 
 const state = {
   initialValue: true,
@@ -12,10 +13,13 @@ const state = {
 
 const Folder =  ({name, files, renderChild, state, toggleActive, style, ...unusedProps}) => (
 	<div>
-		<p onClick={toggleActive} style={foo}>*</p>
-		<p style={{display: 'inline'}}>{name}</p>
+		<p onClick={toggleActive} 
+			style={state ? {...styles.arrow, ...styles.collapse} : {...styles.arrow, ...styles.expand}}>
+				^
+		</p>
+		<p style={styles.folder} onClick={toggleActive}>{name}</p>
 		{state && (
-			<div style={{marginLeft: 15}}>
+			<div style={{marginLeft: 22}}>
 				{files.map((child, i)=><span key={i}>{renderChild(child)}</span>)}
 			</div>
 		)}
@@ -23,12 +27,3 @@ const Folder =  ({name, files, renderChild, state, toggleActive, style, ...unuse
 )
 
 export default liftC(state)(Folder)
-
-const foo= {
-	cursor: 'pointer', fontSize: 20, display: 'inline',
-	WebkitUserSelect: 'none', /* Chrome/Safari */        
-	MozUserSelect: 'none', /* Firefox */
-	MsUserSelect: 'none', /* IE10+ */
-	OUserSelect: 'none',
-	userSelect: 'none',
-}
