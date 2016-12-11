@@ -4,10 +4,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 // local imports
-import configureStore from './store/configureStore'
+import store from './store'
 import { Home } from './views'
-
-const store = configureStore()
 
 render(
   <Provider store={store}>

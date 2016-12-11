@@ -6,7 +6,7 @@ import styles from './styles'
 
 const Home =  ({style, ...unusedProps}) => (
   <div style={{...styles.container, ...style}} {...unusedProps}>
-    hello
+    helloa
   </div>
 )
 
