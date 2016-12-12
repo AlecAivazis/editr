@@ -1,8 +1,7 @@
 const styles = {
   sidebar: {
   	WebkitUserSelect: 'none',
-  	padding: 14,
-  	width: '20%',
+    paddingLeft: 14,
   	display: 'flex',
   	flexDirection: 'column',
     alignItems: 'flex-start',
@@ -20,20 +19,16 @@ const styles = {
   arrow: {
   	margin: 0,
   	marginRight: 6,
-		cursor: 'pointer', 
+		cursor: 'pointer',
 		fontSize: 16,
-		fontWeight: 'bold', 
-		display: 'inline-block',      
+		fontWeight: 'bold',
+		display: 'inline-block',
 	},
 	collapse: {
 		position: 'relative',
     top: -3,
     left: 3,
-		WebkitTransform: 'rotate(180deg)',
 	},
-	expand: { 
-		WebkitTransform: 'rotate(90deg)',
-	}
 }
 
 export default styles

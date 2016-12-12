@@ -5,34 +5,16 @@ import File from './File'
 import Folder from './Folder'
 import styles from './styles'
 
-const exampleFolder = {
-	name: 'Borat stuff', 
-	path: null, 
-	files: [
-		{name: 'azumat.txt', path: null, files: []},
-		{name: 'pamela_naked.jpg', path: null, files: []},
-		{name: 'Rule 34', path: null, files: [
-			{name: 'wawaweewa', path: null, files: []},
-			{name: 'king of the castle', path: null, files: []},
-		]},
-		{name: 'yekshimesh', path: null, files: []}
-	]
-}
-
-const renderChild = (child) => {
-	if (child.files.length > 0){
-		return (
-			<Folder name={child.name} files={child.files} renderChild={renderChild} />
-		)
-	}
-	else{
-		return (<File name={child.name} />)
-	}
-}
-
-const FileBrowser =  ({style, ...unusedProps}) => (
+const FileBrowser =  ({style, files, dispatch, ...unusedProps}) => (
     <div style={{...styles.sidebar, ...style}} {...unusedProps}>
-  		{renderChild(exampleFolder)}
+    	{files.map((entry, i) =>
+    		// if the has children
+    		(entry.files && entry.files.length > 0)
+    			// treat it like a directory
+    			? <Folder name={entry.name} files={entry.files} key={i}/>
+    			// otherwise its a file
+    			: <File name={entry.name} key={i}/>
+    	)}
     </div>
 )
 
