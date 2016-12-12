@@ -7,7 +7,6 @@ import styles from './styles'
 
 const Folder =  ({name, files, state:active, toggle, style, ...unusedProps}) => (
 	<div>
-        {console.log(files)}
         <div onClick={toggle}>
             {active ? 'v ' : '> '}
             {name}
