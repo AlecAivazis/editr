@@ -1,8 +1,13 @@
 export default {
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  	display: 'flex',
+  	flexDirection: 'row',
     height: '100%',
+  },
+  contentPane: {
+  	padding: 20,
+  	width: '80%',
+  	backgroundColor: 'black',
+  	color: 'green',
   }
 }
